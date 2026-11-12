@@ -1,0 +1,25 @@
+[project]
+name = "ble-scanner"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "BashCtl", }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "bleak>=3.1.0",
+    "dataclasses-json>=0.6.7",
+    "rich>=15.0.0",
+]
+
+[project.scripts]
+ble-scanner = "ble.scanner:main"
+
+[build-system]
+requires = ["uv_build>=0.12.12,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "ble"
+module-root = "src"
