@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "BashCtl", }
+    { name = "BashCtl" }
 ]
 requires-python = ">=3.13"
 dependencies = [
@@ -23,3 +23,8 @@ build-backend = "uv_build"
 [tool.uv.build-backend]
 module-name = "ble"
 module-root = "src"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
