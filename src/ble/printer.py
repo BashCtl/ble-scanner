@@ -29,7 +29,10 @@ class Printer:
 
         self.console.print(table)
 
-    def __details_table(self, details: Details):
+    def __details_table(self, details: Details | None):
+        if details is None:
+            return Text("No details available")
+
         table = Table(header_style="cyan", box=None, padding=(0, 1))
         table.add_column("Property")
         table.add_column("Value")
